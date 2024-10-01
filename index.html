@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запис Клієнтів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Записати клієнта -->
+        <div class="form-card">
+            <form action="#" name="submit-to-google-sheet">
+                <h2>Записати клієнта</h2>
+
+                <input type="text" name="Name" id="Name" autocomplete="off"
+                placeholder="Введи ім'я клієнта" oninput="filterNames()" required list="nameList">
+
+                <datalist id="nameList">
+                </datalist>
+
+                <input type="date" name="Date" id="Date" autocomplete="off"
+                placeholder="Введи дату запису" required>
+
+                <input type="time" name="Time" id="Time" autocomplete="off"
+                required step="600">
+
+                <button type="submit">Записати</button>
+            </form>
+        </div>
+
+        <!-- Інформація клієнта -->
+        <div class="client-info">
+            <h2>Інформація клієнта</h2>
+
+            <input type="text" name="NameInfo" id="NameInfo" autocomplete="off"
+            placeholder="Введи ім'я клієнта" required>
+
+            <div id="clientData" class="client-data">
+                <input type="text" value="01.12.2024" disabled>
+                <input type="text" value="11:30" disabled>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
